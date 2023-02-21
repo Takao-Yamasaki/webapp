@@ -9,12 +9,11 @@ import (
 func (app *application) routes() http.Handler {
 	mux := chi.NewRouter()
 
-	// register middleware
+	// ミドルウェアの登録
 	mux.Use(middleware.Recoverer)
 
-	// register routes
+	// ルートの登録
 
-	// static assets
-
+	// 静的資産
 	return mux
 }
