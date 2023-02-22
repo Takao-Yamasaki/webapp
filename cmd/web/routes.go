@@ -13,6 +13,7 @@ func (app *application) routes() http.Handler {
 	mux.Use(middleware.Recoverer)
 
 	// ルートの登録
+	mux.Get("/", app.Home)
 
 	// 静的資産
 	return mux
